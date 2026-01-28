@@ -1,6 +1,6 @@
-
 using DigitalWallet.Api.Data;
 using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
 
 namespace DigitalWallet.Api
 {
@@ -26,6 +26,7 @@ namespace DigitalWallet.Api
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+                app.MapScalarApiReference();
             }
 
             app.UseHttpsRedirection();
